@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specific-page</title>
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../sp.css">
+</head>
+
+<body>
+    <header class="navi-contain">
+        <div class="navi">
+            <div class="left-navi">
+                <img src="../fonts/fonts/city.svg" class="navi-img">
+                <span>陕西省</span>
+            </div>
+			<div class="right-navi">
+			    <a class="navi-button" href="../../../DataBrowsing/China/China.html">返回首页</a>
+			    <!-- <a class="navi-button" href="../../gallery.html">热门词云</a>
+			    <a class="navi-button" href="../../general.html">远景规划</a>
+			    <a class="navi-button active" href="../..../../China/China.html">具体省份</a>
+			
+			    <a class="navi-button" href="../../contact.html">联系我们</a> -->
+			</div>
+        </div>
+    </header>
+
+
+    <aside class="left-father">
+        <div class="left-box">
+            <div class="left-title">
+            景区介绍
+            </div>
+            <a href="../陕西/红色背景.html" class="left-button left-button-point"><img src="../fonts/fonts/ecnomic.svg"
+                class="left-img"><span class="label">红色背景</span></a>
+            <a href="../陕西/红色景区.html" class="left-button"><img src="../fonts/fonts/law.svg"
+                    class="left-img"><span class="label">红色景区</span></a>
+            <a href="../陕西/延安革命纪念馆.html" class="left-button"><img src="../fonts/fonts/rush.svg"
+                    class="left-img"><span class="label">延安革命纪念馆</span></a>
+            <a href="../陕西/志愿服务.html" class="left-button"><img src="../fonts/fonts/ecnomic.svg"
+                    class="left-img"><span class="label">志愿服务</span></a>
+        </div>
+    </aside>
+    <main class="right-box">
+            <div class="right-top-box">
+                <h4 style="color:#012970">延安革命纪念馆</h4>
+                <!-- <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" class="bread-a">主页</a></li>
+                        <li class="breadcrumb-item"><a href="/China.html" class="bread-a">具体省份</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="bread-a">四川省</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color:#51678f">知识产权</li>
+                    </ol> -->
+                </nav>
+                <div class="card-2">
+                    <h4 class="top-card-title">
+                        景区介绍
+                        <span class="top-card-span">陕西延安市宝塔区</span>
+                    </h4>
+                    <p class="top-card-p">
+                        延安革命纪念馆位于陕西省延安市，是一座集革命历史、红色文化和爱国主义教育于一体的综合性博物馆。它不仅是延安精神的重要载体，也是中国革命历史的重要见证。该馆建筑风格简约雄伟，充分反映了延安精神的内涵。施工工艺采用现代工艺，同时融入红色记忆的建筑材料，使整体建筑既具有现代感，又不失历史感<br>
+                    </p>
+                    <p class="top-card-p">
+                        在展馆内部，序厅的设计尤为引人注目。首先映入眼帘的是毛泽东、朱德、刘少奇、周恩来、任弼时等老一辈革命家与来自五湖四海的工人、农民、军人、知识分子以及国际友人在一起的主体雕塑。这一雕塑生动体现了政党、领袖与群众的密切关系，以及毛泽东思想作为全党指导思想的地位。背景浮雕则展现了陕北黄土高原上挺立的延安宝塔和一轮红日，象征着中国共产党领导中国革命从胜利走向胜利的光辉历程。
+    
+                    </p>
+                    <p class="top-card-p">
+                        延安革命纪念馆的展览内容丰富，主要包括“中央苏区——从严治党的有益探索”“延安时期的组织建设”“延安时期的思想建设”“延安时期的制度建设”“延安时期的作风建设”以及“继往开来——开创全面从严治党新时代”等多个单元。这些展览通过大量的照片、文物以及声、光、电等科技手段，生动再现了中国共产党在延安时期的革命斗争历程和延安精神的形成过程。<a href="https://baike.baidu.com/item/%E5%BB%B6%E5%AE%89%E9%9D%A9%E5%91%BD%E7%BA%AA%E5%BF%B5%E9%A6%86/2977273">查看更多</a>
+                    </p>
+                </div>
+            </div>
+            <div class="right-bottom-box">
+                <div class="card-1" id="bar">
+                </div>
+                <!-- <div class="card-1" id="bar2">
+                </div> -->
+    
+            </div>
+        </main>
+        </div>
+    
+    
+        <script src="echarts.min.js"></script>
+    
+        <script src="../button.js"> </script>
+    
+        <script src="../echarts.min.js"></script>
+        <script>
+            var chartDom = document.getElementById('bar');
+            var myChart = echarts.init(chartDom);
+            var option;
+            //option...
+            option = {
+                title: {
+                    text: '延安革命纪念馆情况统计'
+                },
+                legend: {},
+                tooltip: {},
+                dataset: {
+                    source: [
+                        ['product', '2019', '2023'],
+                        ['景区收入(百万)', 3020.4, 6404.2],
+                        ['景区人数(千人)', 3013.7,5071.7],
+                        ['志愿者人数(人)', 6404, 8365],
+                    ]
+                },
+                xAxis: { type: 'category' },
+                yAxis: {},
+                // Declare several bar series, each will be mapped
+                // to a column of dataset.source by default.
+                series: [
+                    {
+                        type: 'bar',
+                        itemStyle: {
+                            color: "#a5d58e",
+                        },
+                    },
+                    {
+                        type: 'bar',
+                        itemStyle: {
+                            color: "#5572c9",
+                        },
+                    }
+                ]
+            };
+            option && myChart.setOption(option);
+    
+            // var chartDom2 = document.getElementById('bar2');
+            // var myChart2 = echarts.init(chartDom2);
+            // var option2;
+            // //option2...
+            // option2 = {
+            //     title: {
+            //       
+            //     },
+            //     tooltip: {
+            //         trigger: 'item',
+            //         formatter: '{a} <br /> {b}:{c}'
+            //     },
+            //     radiusAxis: {},
+            //     polar: {},
+            //     series: [
+            //         {
+            //             type: 'bar',
+            //             data: [60, 88, 40, 30],
+            //             coordinateSystem: 'polar',
+            //             name: '2020',
+            //             stack: 'a',
+            //             itemStyle: {
+            //                 color: "#73c0de"
+            //             },
+            //             emphasis: {
+            //                 focus: 'series'
+            //             }
+            //         },
+            //         {
+            //             type: 'bar',
+            //             data: [60, 4, 40, 70],
+            //             coordinateSystem: 'polar',
+            //             name: '2025',
+            //             stack: 'a',
+            //             itemStyle: {
+            //                 color: "#fac858"
+            //             },
+            //             emphasis: {
+            //                 focus: 'series'
+            //             }
+            //         }
+            //     ],
+            //     legend: {
+            //         show: true,
+            //         data: ['2020', '2025']
+            //     }
+            // };
+            // option2 && myChart2.setOption(option2);
+        </script>
+    
+    
+    </body>
+    
+    </html>

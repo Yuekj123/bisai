@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specific-page</title>
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../sp.css">
+</head>
+
+<body>
+    <header class="navi-contain">
+        <div class="navi">
+            <div class="left-navi">
+                <img src="../fonts/fonts/city.svg" class="navi-img">
+                <span>四川省</span>
+            </div>
+            <div class="right-navi">
+                <a class="navi-button" href="../../../DataBrowsing/China/China.html">返回首页</a>
+                <!-- <a class="navi-button" href="../../gallery.html">热门词云</a>
+                <a class="navi-button" href="../../general.html">远景规划</a>
+                <a class="navi-button active" href="../../China.html">具体省份</a>
+
+                <a class="navi-button" href="../../contact.html">联系我们</a> -->
+            </div>
+        </div>
+    </header>
+
+
+    <aside class="left-father">
+        <div class="left-box">
+            <div class="left-title">
+                背景以及数据介绍
+            </div>
+            <a href="../四川/红色背景.html" class="left-button left-button-point"><img src="../fonts/fonts/ecnomic.svg"
+                class="left-img"><span class="label">红色背景</span></a>
+            <a href="../四川/红色景区.html" class="left-button"><img src="../fonts/fonts/law.svg"
+                    class="left-img"><span class="label">红色景区</span></a>
+            <a href="../四川/朱德故里.html" class="left-button"><img src="../fonts/fonts/rush.svg"
+                    class="left-img"><span class="label">朱德故里</span></a>
+            <a href="../四川/志愿服务.html" class="left-button"><img src="../fonts/fonts/ecnomic.svg"
+                    class="left-img"><span class="label">志愿服务</span></a>
+            </a>
+        </div>
+    </aside>
+    <main class="right-box">
+        <div class="right-top-box">
+            <h4 style="color:#012970">红色背景</h4>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="bread-a">主页</a></li>
+                    <li class="breadcrumb-item"><a href="../../China/China.html" class="bread-a">具体省份</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="bread-a">四川省</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" style="color:#51678f">红色教育</li>
+                </ol>
+            </nav>
+            <div class="card-2">
+                <h4 class="top-card-title">
+                    红色背景
+                    <span class="top-card-span">|四川</span>
+                </h4>
+                <p class="top-card-p">
+                    四川省的红色背景深厚且丰富
+                    首先，四川是红军长征的重要途经地之一。在长征途中，红军战士们克服了重重困难，展现出坚定的革命信念和顽强的战斗精神。四川的红色文化承载了这段不朽的革命史诗，见证了红军长征的英勇壮举和革命先烈的牺牲精神。特别是在红原草原，这里是“七根火柴”和“红军柳”故事的发生地，红军三大主力长征均途经此地，镌刻下了红军长征艰苦卓绝征服草地的英勇足迹。
+                    
+                    其次，四川是川陕革命根据地中心区域，老一辈无产阶级革命家邓小平、朱德、陈毅等同志的家乡，这些革命前辈的足迹深深烙印在这片土地上，使得四川的红色历史更加丰富。在四川的许多革命遗址和纪念馆中，如邓小平故居和纪念馆、华蓥山游击队纪念馆、巴中市红四方面军总指挥部旧址纪念馆等，我们不仅可以了解到红军长征的历史细节，更能感受到革命先烈的英勇事迹和革命精神。
+                    
+                    此外，四川的红色旅游线路更是串联起巧渡金沙江、飞夺泸定桥、彝海结盟等经典故事和场景，为游客提供了深入体验红色历史、传承奋斗精神的载体。这些红色旅游线路不仅让人们铭记历史、缅怀先烈，更让人们感受到四川人民开放包容、崇德尚实，吃苦耐劳、敢为人先的精神。
+<a href="https://www.sc.gov.cn/10462/12771/2021/4/12/584a9e323fa14bed860982647bcee43b.shtml">查看更多</a>
+                </p>
+            </div>
+        </div>
+        <div class="right-bottom-box">
+            <div class="card-1" id="bar">
+
+            </div>
+
+
+
+            <div class="card-1" id="bar2">
+
+            </div>
+
+        </div>
+    </main>
+    </div>
+
+    <script src="echarts.min.js"></script>
+
+    <script src="../button.js"></script>
+
+    <script src="../echarts.min.js"></script>
+    <script>
+        var chartDom = document.getElementById('bar');
+        var myChart = echarts.init(chartDom);
+        var option;
+        //option...
+        option = {
+            title: {
+                text: '不同时期红色景点发展情况'
+            },
+            legend: {},
+            tooltip: {},
+            dataset: {
+                source: [
+                    ['product', '2019', '2023'],
+                    ['旅游人数(%)', 70.25, 92.09],
+                    ['旅游景点收入(%)', 78.31, 96],
+                    ['旅游宣传投入(%)', 60.83, 96],
+                ]
+            },
+            xAxis: { type: 'category' },
+            yAxis: {},
+            // Declare several bar series, each will be mapped
+            // to a column of dataset.source by default.
+            series: [
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        color: "#ec6464",
+                    },
+                },
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        color: "#5474c4",
+                    },
+                }
+            ]
+        };
+        option && myChart.setOption(option);
+        option && myChart.setOption(option);
+
+        var chartDom2 = document.getElementById('bar2');
+        var myChart2 = echarts.init(chartDom2);
+        var option2;
+        //option2...
+        option2 = {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                top: '5%',
+                left: 'center'
+            },
+            series: [
+                {
+                    name: '红色景点旅游年龄分布',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: true,
+                    itemStyle: {
+                        borderRadius: 10,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        {
+                            value: 1404 , name: '18岁至30人数(千)', itemStyle: {
+                                color: "#9bdb7b",
+                            }
+                        },
+                        {
+                            value: 1249 , name: '30岁至50岁人数(千)', itemStyle: {
+                                color: "#5474c4",
+                            }
+                        },
+                        {
+                            value: 155, name: '50岁以上人数(千)', itemStyle: {
+                                color: "#fbcb5d",
+                            }
+                        },
+                        {
+                            value: 83, name: '18岁以下人数数量(千)', itemStyle: {
+                                color: "#ec6464",
+                            }
+                        },
+                    ]
+                }
+            ]
+        };
+        option2 && myChart2.setOption(option2);
+    </script>
+
+
+</body>
+
+</html>

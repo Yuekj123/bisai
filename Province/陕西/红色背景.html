@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specific-page</title>
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../sp.css">
+</head>
+
+<body>
+    <header class="navi-contain">
+        <div class="navi">
+            <div class="left-navi">
+                <img src="../fonts/fonts/city.svg" class="navi-img">
+                <span>陕西省</span>
+            </div>
+            <div class="right-navi">
+                <a class="navi-button" href="../../../DataBrowsing/China/China.html">返回首页</a>
+                <!-- <a class="navi-button" href="../../gallery.html">热门词云</a>
+                <a class="navi-button" href="../../general.html">远景规划</a>
+                <a class="navi-button active" href="../../China.html">具体省份</a>
+
+                <a class="navi-button" href="../../contact.html">联系我们</a> -->
+            </div>
+        </div>
+    </header>
+
+
+    <aside class="left-father">
+        <div class="left-box">
+            <div class="left-title">
+                背景以及数据介绍
+            </div>
+            <a href="../陕西/红色背景.html" class="left-button left-button-point"><img src="../fonts/fonts/ecnomic.svg"
+                class="left-img"><span class="label">红色背景</span></a>
+            <a href="../陕西/红色景区.html" class="left-button"><img src="../fonts/fonts/law.svg"
+                    class="left-img"><span class="label">红色景区</span></a>
+            <a href="../陕西/延安革命纪念馆.html" class="left-button"><img src="../fonts/fonts/rush.svg"
+                    class="left-img"><span class="label">延安革命纪念馆</span></a>
+            <a href="../陕西/志愿服务.html" class="left-button"><img src="../fonts/fonts/ecnomic.svg"
+                    class="left-img"><span class="label">志愿服务</span></a>
+            </a>
+        </div>
+    </aside>
+    <main class="right-box">
+        <div class="right-top-box">
+            <h4 style="color:#012970">红色背景</h4>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="bread-a">主页</a></li>
+                    <li class="breadcrumb-item"><a href="../../China/China.html" class="bread-a">具体省份</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="bread-a">陕西省</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" style="color:#51678f">红色教育</li>
+                </ol>
+            </nav>
+            <div class="card-2">
+                <h4 class="top-card-title">
+                    红色背景
+                    <span class="top-card-span">|陕西</span>
+                </h4>
+                <p class="top-card-p">
+                   陕西省的红色文化背景丰富而深刻，它源于中国共产党在陕西领导人民进行的长期革命斗争。从1921年中国共产党成立起，陕西便成为了中国革命的重要阵地。1922年，陕西建立了中国共产主义青年团组织，1925年10月，中国共产党陕西党组织正式成立，带领广大党员和人民群众在三秦大地上进行了艰苦卓绝的斗争。
+                   
+                   在大革命时期，陕西党组织领导陕西人民开展了反军阀、反帝国主义的斗争，争取国民革命的胜利。土地革命战争时期，中共陕西党组织和广大共产党员率领人民群众在陕北及陕甘边界地区积极开展武装斗争，创建了西北革命根据地，覆盖陕西的关中和陕北地区。
+                   
+                   抗日战争时期，陕北作为中国革命的大本营，党中央领导全国人民在此战斗了十三个春秋，建立了陕甘宁抗日民主根据地，并形成了以坚定的理想信仰、不懈的艰苦奋斗、全心全意为人民服务为主要内容的延安精神，延安也因此被誉为中国的“红色首都”。解放战争时期，毛泽东率领党中央转战陕北，人民解放军在陕西进行了多次战役，最终取得了胜利。
+                   
+                   这些革命斗争不仅为陕西和中国人民的解放事业做出了伟大的贡献，也留下了极其丰富的红色文化资源。陕西省的红色文化资源涵盖了中国革命的各个时期，具有深刻的内涵和重要的历史价值。
+                   
+                   此外，陕西省还积极推动红色旅游的发展，建立了众多的红色旅游景点和爱国主义教育基地，如西安事变纪念馆、八路军西安办事处纪念馆等，这些景点不仅保存了丰富的历史遗迹，也为人们提供了一个了解历史、缅怀先烈的重要场所。
+<a href="https://baijiahao.baidu.com/s?id=1658884055371694097">查看更多</a>
+                </p>
+            </div>
+        </div>
+        <div class="right-bottom-box">
+            <div class="card-1" id="bar">
+
+            </div>
+
+
+
+            <div class="card-1" id="bar2">
+
+            </div>
+
+        </div>
+    </main>
+    </div>
+
+    <script src="echarts.min.js"></script>
+
+    <script src="../button.js"></script>
+
+    <script src="../echarts.min.js"></script>
+    <script>
+        var chartDom = document.getElementById('bar');
+        var myChart = echarts.init(chartDom);
+        var option;
+        //option...
+        option = {
+            title: {
+                text: '不同时期红色景点发展情况'
+            },
+            legend: {},
+            tooltip: {},
+            dataset: {
+                source: [
+                    ['product', '2019', '2023'],
+                    ['占全旅游人数(%)', 54.25, 78.09],
+                    ['占全旅游景点收入(%)', 69.31, 88],
+                    ['占全旅游旅游宣传投入(%)', 74.83, 96],
+                ]
+            },
+            xAxis: { type: 'category' },
+            yAxis: {},
+            // Declare several bar series, each will be mapped
+            // to a column of dataset.source by default.
+            series: [
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        color: "#ec6464",
+                    },
+                },
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        color: "#5474c4",
+                    },
+                }
+            ]
+        };
+        option && myChart.setOption(option);
+        option && myChart.setOption(option);
+
+        var chartDom2 = document.getElementById('bar2');
+        var myChart2 = echarts.init(chartDom2);
+        var option2;
+        //option2...
+        option2 = {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                top: '5%',
+                left: 'center'
+            },
+            series: [
+                {
+                    name: '红色景点旅游年龄分布',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: true,
+                    itemStyle: {
+                        borderRadius: 10,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        {
+                            value: 1404 , name: '18岁至30人数(千)', itemStyle: {
+                                color: "#9bdb7b",
+                            }
+                        },
+                        {
+                            value: 1249 , name: '30岁至50岁人数(千)', itemStyle: {
+                                color: "#5474c4",
+                            }
+                        },
+                        {
+                            value: 155, name: '50岁以上人数(千)', itemStyle: {
+                                color: "#fbcb5d",
+                            }
+                        },
+                        {
+                            value: 83, name: '18岁以下人数数量(千)', itemStyle: {
+                                color: "#ec6464",
+                            }
+                        },
+                    ]
+                }
+            ]
+        };
+        option2 && myChart2.setOption(option2);
+    </script>
+
+
+</body>
+
+</html>

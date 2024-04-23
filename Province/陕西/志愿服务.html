@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sp.css">
+    <title>specific-page</title>
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navi-contain">
+        <div class="navi">
+            <div class="left-navi">
+                <img src="../fonts/fonts/city.svg" class="navi-img">
+                <span>陕西省</span>
+            </div>
+            <div class="right-navi">
+                <a class="navi-button" href="../../../DataBrowsing/China/China.html">返回首页</a>
+                <!-- <a class="navi-button" href="../../gallery.html">热门词云</a>
+                <a class="navi-button" href="../../general.html">远景规划</a>
+                <a class="navi-button active" href="../..../../China/China.html">具体省份</a>
+
+                <a class="navi-button" href="../../contact.html">联系我们</a> -->
+            </div>
+        </div>
+    </header>
+
+    <aside class="left-father">
+        <div class="left-box">
+            <div class="left-title">
+                志愿服务种类分析
+            </div>
+            <a href="../陕西/红色背景.html" class="left-button left-button-point"><img src="../fonts/fonts/ecnomic.svg"
+                class="left-img"><span class="label">红色背景</span></a>
+            <a href="../陕西/红色景区.html" class="left-button"><img src="../fonts/fonts/law.svg"
+                    class="left-img"><span class="label">红色景区</span></a>
+            <a href="../陕西/延安革命纪念馆.html" class="left-button"><img src="../fonts/fonts/rush.svg"
+                    class="left-img"><span class="label">延安革命纪念馆</span></a>
+            <a href="../陕西/志愿服务.html" class="left-button"><img src="../fonts/fonts/ecnomic.svg"
+                    class="left-img"><span class="label">志愿服务</span></a>
+        </div>
+    </aside>
+    <main class="right-box">
+            <div class="right-top-box">
+                <h4 style="color:#012970">志愿服务</h4>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" class="bread-a">主页</a></li>
+                        <li class="breadcrumb-item"><a href="../../China/China.html" class="bread-a">具体省份</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="bread-a">陕西省</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color:#51678f">活动方式</li>
+                    </ol>
+                </nav>
+                <div class="card-2">
+                    <h4 class="top-card-title">
+                        志愿种类
+                        <span class="top-card-span">陕西</span>
+                    </h4>
+                    <p class="top-card-p">
+                        红色景点讲解服务：志愿者在延安革命纪念馆、八路军西安办事处纪念馆等红色景点，为游客提供讲解服务，介绍革命历史、英雄事迹和红色文化，帮助游客更好地理解和感受红色精神。
+                        
+                        红色故事分享会：志愿者组织举办红色故事分享会，邀请革命后代、老战士或专家学者，讲述革命历史中的感人故事，让参与者更加深入地了解革命先烈的英勇事迹和崇高精神。
+                        
+                        红色文化宣传与推广：志愿者通过制作宣传册、海报等宣传材料，以及利用社交媒体、网络平台等渠道，广泛宣传陕西省的红色旅游资源，吸引更多的人关注和参与红色旅游。
+                        
+                        红色主题教育活动：志愿者组织学校、企事业单位等团体开展红色主题教育活动，如主题党日、红色研学等，通过实地参观、体验式教学等方式，让参与者亲身感受红色文化的魅力。
+                        
+                        志愿服务培训与交流：为了提高志愿者的服务水平和质量，陕西省还会定期组织志愿服务培训与交流活动，包括讲解技巧培训、红色文化知识学习等，让志愿者更好地为游客服务。
+                        
+                        红色文化主题文艺演出：志愿者参与组织或表演以红色文化为主题的文艺演出，如红色歌曲演唱、舞蹈表演、话剧演出等，通过艺术的形式展现革命历史和红色精神，让人们在欣赏演出的同时，感受到红色文化的魅力<a href="http://sxya.wenming.cn/zyfw/202106/t20210608_7155180.shtml">查看更多</a>
+                    </p>
+                </div>
+            </div>
+            <div class="right-bottom-box">
+                <div class="bottom-left-box">
+                    <div class="card-1" id="bar">
+    
+                    </div>
+                </div>
+    
+                <div class="bottom-right-box">
+                    <div class="card-1" id="bar2">
+    
+                    </div>
+                </div>
+            </div>
+        </main>
+        </div>
+    
+        <script src="../echarts.min.js"></script>
+    
+        <script src="../button.js">
+        </script>
+    
+        <script src="./js/echarts.min.js"></script>
+        <script>
+            var chartDom = document.getElementById('bar');
+            var myChart = echarts.init(chartDom);
+            var option;
+            //option...
+            option = {
+                title: {
+                    text: '活动类型数量'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                legend: {},
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    boundaryGap: [0, 0.0001]
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['线上活动类型 ', ' 线下活动类型 ']
+                },
+                series: [
+                    {
+                        name: '2019',
+                        type: 'bar',
+                        data: [25 , 36],
+                        itemStyle: {
+                            color: "#e6e600",
+                        },
+                    },
+                    {
+                        name: '2023',
+                        type: 'bar',
+                        data: [60, 46],
+                        itemStyle: {
+                            color: "#00bfff",
+                        },
+                    }
+                ]
+            };
+     
+            option && myChart.setOption(option);
+    
+            var chartDom2 = document.getElementById('bar2');
+            var myChart2 = echarts.init(chartDom2);
+            var option2;
+            //option2...
+            option2 = {
+                title: {
+                    text: '因志愿服务增人数'
+                },
+                legend: {},
+                tooltip: {},
+                dataset: {
+                    source: [
+                        ['product', '线上志愿活动增加人数', '因线下志愿活动增加人数'],
+                        ['2019年',302645 ,200793],
+                        ['2020年',360980 ,270297],
+                        ['2021年', 420902, 300528],
+                        ['2022年', 460615, 303536],
+                        ['2023年', 480598, 349005],
+                        ['2024年', 245704, 199042]
+    
+                    ]
+                },
+                xAxis: { type: 'category' },
+                yAxis: {},
+                // Declare several bar series, each will be mapped
+                // to a column of dataset.source by default.
+                series: [
+                    {
+                        type: 'bar',
+                        itemStyle: {
+                            color: "#a5d58e",
+                        },
+                    },
+                    {
+                        type: 'bar',
+                        itemStyle: {
+                            color: "#5572c9",
+                        },
+                    }
+                ]
+            };
+    
+            option2 && myChart2.setOption(option2);
+        </script>
+    
+    
+    </body>
+    
+    </html>

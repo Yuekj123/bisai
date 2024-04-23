@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specific-page</title>
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../sp.css">
+</head>
+
+<body>
+    <header class="navi-contain">
+        <div class="navi">
+            <div class="left-navi">
+                <img src="../fonts/fonts/city.svg" class="navi-img">
+                <span>四川省</span>
+            </div>
+			<div class="right-navi">
+				<a class="navi-button" href="../../../DataBrowsing/China/China.html">返回首页</a>
+          
+            </div>
+        </div>
+    </header>
+
+
+    <aside class="left-father">
+        <div class="left-box">
+            <div class="left-title">
+                景区介绍数据分析
+            </div>
+           <a href="../四川/红色背景.html" class="left-button left-button-point"><img src="../fonts/fonts/ecnomic.svg"
+               class="left-img"><span class="label">红色背景</span></a>
+           <a href="../四川/红色景区.html" class="left-button"><img src="../fonts/fonts/law.svg"
+                   class="left-img"><span class="label">红色景区</span></a>
+           <a href="../四川/朱德故里.html" class="left-button"><img src="../fonts/fonts/rush.svg"
+                   class="left-img"><span class="label">朱德故里</span></a>
+           <a href="../四川/志愿服务.html" class="left-button"><img src="../fonts/fonts/ecnomic.svg"
+                   class="left-img"><span class="label">志愿服务</span></a>
+           </a>
+        </div>
+    </aside>
+    <main class="right-box">
+        <div class="right-top-box">
+            <h4 style="color:#012970">朱德故里景区</h4>
+            <!-- <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="bread-a">主页</a></li>
+                    <li class="breadcrumb-item"><a href="/China.html" class="bread-a">具体省份</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="bread-a">四川省</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" style="color:#51678f">知识产权</li>
+                </ol> -->
+            </nav>
+            <div class="card-2">
+                <h4 class="top-card-title">
+                    景区介绍
+                    <span class="top-card-span">四川南充仪陇县马鞍镇</span>
+                </h4>
+                <p class="top-card-p">
+                    朱德故居纪念馆于1982年8月1日落成开馆。2005年进行了改扩建，改扩建后的纪念馆为砖瓦混凝土结构仿古建筑，由两大一小三个四合院组成，青瓦白墙，具有浓郁的川北民居建筑风格。走上百余级台阶，最先跃入眼帘的是位于纪念馆正门广场中央的汉白玉朱德雕像，高4.2米，正前方是宽8.1米、长206级、高30余米的军功道。<br>
+                </p>
+                <p class="top-card-p">
+                    纪念馆正门上方“朱德同志故居纪念馆”9个金色大字，由邓小平亲笔题写。馆内有“朱德生平事迹基本陈列”、“思念”专题陈列和互动体验区三大板块，基本陈列分为“苦闷中的求索”“红军总司令”等9个部分32单元。整个陈展紧扣“人民的光荣”主题，内容丰富，重点突出、手段新颖、配套完善，大量运用图片、实物和适当运用场景、多媒体，实事求是地展示了朱德同志的丰功伟绩，恰如其分地讴歌了朱德同志坚定的理想信念、崇高的思想品格和高超的政治智慧。
+
+                </p>
+                <p class="top-card-p">
+                    “从小就学习朱老总与扁担的故事，今天我终于看到您老人家了。”面对广场中央的汉白玉朱德雕像，来自遂宁的冯祖波感慨地说道。<a href="https://cbgc.scol.com.cn/news/1276818">查看更多</a>
+                </p>
+            </div>
+        </div>
+        <div class="right-bottom-box">
+            <div class="card-1" id="bar">
+            </div>
+            <!-- <div class="card-1" id="bar2">
+            </div> -->
+
+        </div>
+    </main>
+    </div>
+
+
+    <script src="echarts.min.js"></script>
+
+    <script src="../button.js"> </script>
+
+    <script src="../echarts.min.js"></script>
+    <script>
+        var chartDom = document.getElementById('bar');
+        var myChart = echarts.init(chartDom);
+        var option;
+        //option...
+        option = {
+            title: {
+                text: '朱德故里景区情况统计'
+            },
+            legend: {},
+            tooltip: {},
+            dataset: {
+                source: [
+                    ['product', '2019', '2023'],
+                    ['景区收入(百万)', 1020.4, 2524.2],
+                    ['景区人数(千人)', 1513.7,2471.7],
+                    ['志愿者人数(人)', 3404, 6365],
+                ]
+            },
+            xAxis: { type: 'category' },
+            yAxis: {},
+            // Declare several bar series, each will be mapped
+            // to a column of dataset.source by default.
+            series: [
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        color: "#a5d58e",
+                    },
+                },
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        color: "#5572c9",
+                    },
+                }
+            ]
+        };
+        option && myChart.setOption(option);
+
+        // var chartDom2 = document.getElementById('bar2');
+        // var myChart2 = echarts.init(chartDom2);
+        // var option2;
+        // //option2...
+        // option2 = {
+        //     title: {
+        //         text: '知识产权发展主要目标',
+        //         left: 'left'
+        //     },
+        //     angleAxis: {
+        //         type: 'category',
+        //         data: ['知识产权质押融资登记金额(亿元)', '知识产权民事一审案件服判息诉率(%)', '知识产权公共服务网点市(州)覆盖率(%)', '知识产权纠纷人民调解委员会市(州)覆盖率(%)']
+        //     },
+        //     tooltip: {
+        //         trigger: 'item',
+        //         formatter: '{a} <br /> {b}:{c}'
+        //     },
+        //     radiusAxis: {},
+        //     polar: {},
+        //     series: [
+        //         {
+        //             type: 'bar',
+        //             data: [60, 88, 40, 30],
+        //             coordinateSystem: 'polar',
+        //             name: '2020',
+        //             stack: 'a',
+        //             itemStyle: {
+        //                 color: "#73c0de"
+        //             },
+        //             emphasis: {
+        //                 focus: 'series'
+        //             }
+        //         },
+        //         {
+        //             type: 'bar',
+        //             data: [60, 4, 40, 70],
+        //             coordinateSystem: 'polar',
+        //             name: '2025',
+        //             stack: 'a',
+        //             itemStyle: {
+        //                 color: "#fac858"
+        //             },
+        //             emphasis: {
+        //                 focus: 'series'
+        //             }
+        //         }
+        //     ],
+        //     legend: {
+        //         show: true,
+        //         data: ['2020', '2025']
+        //     }
+        // };
+        // option2 && myChart2.setOption(option2);
+    </script>
+
+
+</body>
+
+</html>
